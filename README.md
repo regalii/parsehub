@@ -30,37 +30,37 @@ end
 
 ### Project
 **Get list of projects**
-```
+```ruby
 Parsehub::Project.list
 ```
 **Get project**
-```
+```ruby
 Parsehub::Project.fetch('project-token')
 ```
 **Run project**
-```
+```ruby
 Parsehub::Project.run('project-token')
 ```
 **Get last run data for a project**
-```
+```ruby
 Parsehub::Project.last_ready_run('project-token')
 ```
 
 ### Run
 **Get run**
-```
+```ruby
 Parsehub::Run.fetch('run-token')
 ```
 **Get run data**
-```
+```ruby
 Parsehub::Run.data('run-token')
 ```
 **Cancel run**
-```
+```ruby
 Parsehub::Run.cancel('run-token')
 ```
 **Delete run**
-```
+```ruby
 Parsehub::Run.delete('run-token')
 ```
 
