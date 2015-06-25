@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.parsehub.com/api/v2/projects/test-project-token?api_key=test-api-key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Parsehub Ruby gem v2.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Thu, 25 Jun 2015 17:28:12 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"webhook": null, "last_ready_run": {"status": "complete", "start_time":
+        "2015-06-25T17:19:22", "project_token": "test-project-token", "start_template":
+        "main_template", "pages": 1, "run_token": "test-run-token", "data_ready":
+        1, "md5sum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "end_time": "2015-06-25T17:19:47",
+        "start_url": "http://www.example.com/search?keywords=doctors",
+        "start_value": "{}"}, "main_site": "http://www.example.com/search?keywords=doctors",
+        "run_list": [{"status": "complete", "start_time": "2015-06-25T17:19:22", "project_token":
+        "test-project-token", "start_template": "main_template", "pages": 1,
+        "run_token": "test-run-token", "data_ready": 1, "md5sum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "end_time": "2015-06-25T17:19:47", "start_url": "http://www.example.com/search?keywords=doctors",
+        "start_value": "{}"}], "options_json": "{\"loadJs\": true, \"maxWorkers\":
+        \"1\", \"startUrl\": \"http://www.example.com/search?keywords=doctors\",
+        \"rotateIPs\": false, \"startValue\": \"{}\", \"startTemplate\": \"main_template\"}",
+        "templates_json": "[{\"op\":\"template\",\"targeted\":true,\"label\":\"page\",\"id\":null,\"tag\":\"body\",\"classes\":[],\"styles\":[],\"src\":null,\"position\":1,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":false,\"rooted\":true,\"name\":\"main_template\",\"endAtDuplicate\":true,\"clearSession\":false,\"nodes\":[{\"op\":\"select\",\"targeted\":false,\"label\":\"\",\"id\":null,\"tag\":\"A\",\"classes\":[],\"styles\":[],\"src\":null,\"position\":1,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":true,\"rooted\":false,\"flags\":[],\"nodes\":[{\"op\":\"select\",\"targeted\":true,\"label\":\"Doctors\",\"id\":null,\"tag\":\"H2\",\"classes\":[],\"styles\":[],\"src\":null,\"position\":0,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":false,\"rooted\":false,\"flags\":[],\"nodes\":[{\"op\":\"list\",\"targeted\":true,\"variable\":\"Doctors\",\"removeDuplicates\":false,\"removeKey\":\"\",\"nodes\":[{\"op\":\"extract\",\"targeted\":true,\"variable\":\"name\",\"expression\":\"$e.text\",\"useRegex\":false,\"regexFindAll\":false,\"regex\":\"\",\"nodes\":[]},{\"op\":\"parentSelect\",\"targeted\":false,\"label\":\"\",\"id\":null,\"tag\":null,\"classes\":[],\"styles\":[],\"src\":null,\"position\":0,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":false,\"rooted\":false,\"relativeSpecs\":[],\"depth\":4,\"nodes\":[{\"op\":\"relativeSelect\",\"targeted\":true,\"label\":\"phone\",\"id\":null,\"tag\":\"STRONG\",\"classes\":[\"businessCapsule--details--tel\"],\"styles\":[],\"src\":null,\"position\":1,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":true,\"rooted\":false,\"relativeSpecs\":[],\"nodes\":[{\"op\":\"extract\",\"targeted\":true,\"variable\":\"phone\",\"expression\":\"$e.text\",\"useRegex\":false,\"regexFindAll\":false,\"regex\":\"\",\"nodes\":[]}]}]},{\"op\":\"parentSelect\",\"targeted\":false,\"label\":\"\",\"id\":null,\"tag\":null,\"classes\":[],\"styles\":[],\"src\":null,\"position\":0,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":false,\"rooted\":false,\"relativeSpecs\":[],\"depth\":4,\"nodes\":[{\"op\":\"relativeSelect\",\"targeted\":false,\"label\":\"\",\"id\":null,\"tag\":\"A\",\"classes\":[\"businessCapsule--details--address\"],\"styles\":[],\"src\":null,\"position\":0,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":true,\"rooted\":false,\"relativeSpecs\":[],\"nodes\":[{\"op\":\"relativeSelect\",\"targeted\":true,\"label\":\"address\",\"id\":null,\"tag\":\"SPAN\",\"classes\":[],\"styles\":[],\"src\":null,\"position\":0,\"hasTextNodes\":false,\"waitForElements\":false,\"allDescendants\":false,\"rooted\":false,\"relativeSpecs\":[],\"nodes\":[{\"op\":\"extract\",\"targeted\":true,\"variable\":\"address\",\"expression\":\"$e.text\",\"useRegex\":false,\"regexFindAll\":false,\"regex\":\"\",\"nodes\":[]}]}]}]}]}]}]}]}]",
+        "title": "www.yell.com Project", "last_run": {"status": "complete", "start_time":
+        "2015-06-25T17:19:22", "project_token": "test-project-token", "start_template":
+        "main_template", "pages": 1, "run_token": "test-run-token", "data_ready":
+        1, "md5sum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "end_time": "2015-06-25T17:19:47",
+        "start_url": "http://www.example.com/search?keywords=doctors",
+        "start_value": "{}"}, "token": "test-project-token", "main_template":
+        "main_template", "output_type": "json", "syntax_version": 2}'
+    http_version:
+  recorded_at: Thu, 25 Jun 2015 17:28:36 GMT
+recorded_with: VCR 2.9.3

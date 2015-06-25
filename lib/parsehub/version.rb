@@ -1,3 +1,4 @@
 module Parsehub
-  VERSION = "0.0.1"
+  API_VERSION = '2'
+  VERSION     = [API_VERSION, '0.0'].join('.')
 end

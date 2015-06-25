@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.parsehub.com/api/v2/runs/test-run-token/data?api_key=test-api-key
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Parsehub Ruby gem v2.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Thu, 25 Jun 2015 18:03:11 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '998'
+      Connection:
+      - keep-alive
+      Last-Modified:
+      - Thu, 25 Jun 2015 17:19:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"Doctors":[{"name":"Lancashire Eye Clinic / Mr. M F Raines Eye Surgeon","phone":"01253
+        730302","address":"9 Lowther Terrace, Lytham St Annes, FY8 5QG, Lancashire"},{"name":"BUTTAR,
+        VICKERS, ALLAN, FUNG, TSOI & SALMON","phone":"01235 355469","address":"The
+        Abingdon Surgery, 65, Stert St, Abingdon, OX14 3LB, Oxfordshire"},{"name":"PRIVATE
+        GP CLINIC SEVENOAKS","phone":"01732 835212","address":"The Dartmoor Suite,
+        Great Hollanden Business Centre, Sevenoaks, TN15 0SQ, Kent"}]}'
+    http_version:
+  recorded_at: Thu, 25 Jun 2015 18:03:35 GMT
+recorded_with: VCR 2.9.3

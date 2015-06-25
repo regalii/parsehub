@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.parsehub.com/api/v2/projects/test-project-token/run?api_key=test-api-key
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Parsehub Ruby gem v2.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Thu, 25 Jun 2015 18:10:43 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: UTF-8
+      string: '{"status": null, "start_time": null, "project_token": "test-project-token",
+        "start_template": "main_template", "pages": null, "run_token": "test-run-token-2",
+        "data_ready": 0, "md5sum": null, "end_time": null, "start_url": "http://www.example.com/search?keywords=doctors",
+        "start_value": "{}"}'
+    http_version:
+  recorded_at: Thu, 25 Jun 2015 18:11:06 GMT
+recorded_with: VCR 2.9.3

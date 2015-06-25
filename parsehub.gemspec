@@ -6,11 +6,11 @@ require 'parsehub/version'
 Gem::Specification.new do |spec|
   spec.name          = "parsehub"
   spec.version       = Parsehub::VERSION
-  spec.authors       = ["Hesham"]
-  spec.email         = ["elnahhas@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.authors       = ["Hesham El-Nahhas"]
+  spec.email         = ["hello@hesham.ca"]
+  spec.summary       = %q{Unofficial parsehub ruby client}
+  spec.description   = %q{Unofficial parsehub ruby client}
+  spec.homepage      = "https://www.parsehub.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,6 +18,11 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler",  "~> 1.7"
+  spec.add_development_dependency "rake",     "~> 10.0"
+  spec.add_development_dependency "minitest", "~> 5.7.0"
+  spec.add_development_dependency "vcr",      "~> 2.9.3"
+  spec.add_development_dependency "webmock",  "~> 1.21.0"
+
+  spec.add_dependency 'json'
 end
