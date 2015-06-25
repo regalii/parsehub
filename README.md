@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Configure
 
-```
+```ruby
 Parsehub.configure do |config|
   config.api_key = 'your-account-api-key'
 end
