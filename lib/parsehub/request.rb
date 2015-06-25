@@ -9,23 +9,17 @@ module Parsehub
       @params   = params.merge!(api_key: config.api_key)
     end
 
+    def method_class
+      "Net::HTTP::#{@method.capitalize}".split('::').inject(Object) {|o,c| o.const_get c}
+    end
+
     def send
       url = [config.host, @endpoint].join('/')
 
       uri = URI.parse(url)
       uri.query = URI.encode_www_form(@params)
 
-      request = case @method
-                when :get
-                  Net::HTTP::Get.new(uri.request_uri)
-                when :post
-                  Net::HTTP::Post.new(uri.request_uri)
-                when :delete
-                  Net::HTTP::Delete.new(uri.request_uri)
-                else
-                  raise 'HTTP method not supported'
-                end
-
+      request = method_class.new(uri.request_uri)
       request["User-Agent"] = "Parsehub Ruby gem v#{Parsehub::VERSION}"
 
       http = Net::HTTP.new(uri.host, uri.port)
