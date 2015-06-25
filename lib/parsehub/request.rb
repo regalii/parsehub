@@ -10,14 +10,14 @@ module Parsehub
     end
 
     def method_class
-      "Net::HTTP::#{@method.capitalize}".split('::').inject(Object) {|o,c| o.const_get c}
+      "Net::HTTP::#{method.capitalize}".split('::').inject(Object) {|o,c| o.const_get c}
     end
 
     def send
-      url = [config.host, @endpoint].join('/')
+      url = [config.host, endpoint].join('/')
 
       uri = URI.parse(url)
-      uri.query = URI.encode_www_form(@params)
+      uri.query = URI.encode_www_form(params)
 
       request = method_class.new(uri.request_uri)
       request["User-Agent"] = "Parsehub Ruby gem v#{Parsehub::VERSION}"
