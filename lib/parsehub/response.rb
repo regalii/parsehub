@@ -8,7 +8,7 @@ module Parsehub
       @data = begin
                 JSON::parse(http_response.body)
               rescue
-                {message: 'Server returned a non-json error'}
+                {message: 'Server returned a non-json error', raw: http_response.body.inspect}
               end if http_response
     end
 
