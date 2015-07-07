@@ -8,8 +8,10 @@ module Parsehub
       @data = begin
                 JSON::parse(http_response.body)
               rescue
-                {message: 'Server returned a non-json error', raw: http_response.body.inspect}
+                {message: 'Server returned a non-json error'}
               end if http_response
+
+      @data.merge!(raw: http_response.body.inspect) if Parsehub.configuration.debug?
     end
 
     def success?
