@@ -1,7 +1,7 @@
 module Parsehub
   class Configuration
 
-    attr_accessor :api_key
+    attr_accessor :api_key, :debug
     attr_reader   :host
 
     def initialize
