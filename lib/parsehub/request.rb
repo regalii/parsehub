@@ -29,9 +29,16 @@ module Parsehub
 
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
-      response = http.request(request)
 
-      Parsehub::Response.new(response)
+      Parsehub.logger.debug(self) if Parsehub.configuration.logger?
+
+      http_response = http.request(request)
+
+      response = Parsehub::Response.new(http_response)
+
+      Parsehub.logger.debug(response) if Parsehub.configuration.logger?
+
+      response
     end
   end
 end

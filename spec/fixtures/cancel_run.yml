@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.parsehub.com/api/v2/runs/test-run-token/cancel?api_key=test-api-key
+    uri: https://www.parsehub.com/api/v2/runs/test-run-token/cancel
     body:
-      encoding: UTF-8
-      string: ''
+      encoding: US-ASCII
+      string: api_key=test-project-token
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3

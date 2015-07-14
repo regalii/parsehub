@@ -12,7 +12,7 @@ http_interactions:
       Accept:
       - '*/*'
       User-Agent:
-      - Parsehub Ruby gem v2.0.0
+      - Parsehub ruby gem v2.0.0
   response:
     status:
       code: 200
@@ -33,6 +33,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"Doctors":[{"name":"Washington Heights Eye Clinic","phone":"1234567890","address":"9 Fake St, New York, NY 10033"},{"name":"Hola","phone":"987654321","address":"20 Fake St, New York, NY 10031"}]}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 25 Jun 2015 18:04:40 GMT
 recorded_with: VCR 2.9.3

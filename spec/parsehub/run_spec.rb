@@ -4,6 +4,7 @@ describe Parsehub::Run do
   before do
     Parsehub.configure do |config|
       config.api_key = 'test-api-key'
+      config.logger  = nil
     end
   end
 
@@ -17,7 +18,7 @@ describe Parsehub::Run do
       headers: {
         'Accept'          => '*/*',
         'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'      => 'Parsehub Ruby gem v2.0.0'
+        'User-Agent'      => 'Parsehub ruby gem v2.0.0'
       }
   end
 
@@ -31,7 +32,7 @@ describe Parsehub::Run do
       headers: {
         'Accept'          => '*/*',
         'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'      => 'Parsehub Ruby gem v2.0.0'
+        'User-Agent'      => 'Parsehub ruby gem v2.0.0'
       }
   end
 
@@ -41,11 +42,11 @@ describe Parsehub::Run do
     end
 
     assert_requested :post,
-      "https://www.parsehub.com/api/v2/runs/test-run-token/cancel?api_key=test-api-key",
+      "https://www.parsehub.com/api/v2/runs/test-run-token/cancel",
       headers: {
         'Accept'          => '*/*',
         'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'      => 'Parsehub Ruby gem v2.0.0'
+        'User-Agent'      => 'Parsehub ruby gem v2.0.0'
       }
   end
 
@@ -59,7 +60,7 @@ describe Parsehub::Run do
       headers: {
         'Accept'          => '*/*',
         'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'      => 'Parsehub Ruby gem v2.0.0'
+        'User-Agent'      => 'Parsehub ruby gem v2.0.0'
       }
   end
 end

@@ -1,11 +1,16 @@
+require 'logger'
+
 require "parsehub/version"
 require "parsehub/configuration"
 require "parsehub/request"
 require "parsehub/response"
 require "parsehub/project"
 require "parsehub/run"
+require "parsehub/logger"
 
 module Parsehub
+  class Error < StandardError ; end
+
   class << self
     attr_writer :configuration
   end
@@ -16,5 +21,9 @@ module Parsehub
 
   def self.configure
     yield(configuration)
+  end
+
+  def self.logger
+    @logger ||= configuration.logger
   end
 end
