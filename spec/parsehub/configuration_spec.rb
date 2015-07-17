@@ -14,15 +14,7 @@ describe Parsehub::Configuration do
     Parsehub.configuration.host.must_equal("https://www.parsehub.com/api/v2")
   end
 
-  it "sets custom logger" do
-    class AwesomeLogger < Parsehub::Logger
-    end
-
-    Parsehub.configure do |config|
-      config.logger = AwesomeLogger.new(STDOUT)
-    end
-
-    Parsehub.configuration.logger.must_be_kind_of(AwesomeLogger)
-    Parsehub.configuration.logged?.must_equal(true)
+  it "defaults debug to false" do
+    Parsehub.configuration.debug?.must_equal(false)
   end
 end

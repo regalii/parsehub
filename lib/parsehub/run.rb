@@ -1,19 +1,19 @@
 module Parsehub
   class Run
     def self.fetch(token)
-      Parsehub::Request.new(:get, "runs/#{token}").send
+      Parsehub::Request.new("runs/#{token}").get
     end
 
     def self.data(token, params = {})
-      Parsehub::Request.new(:get, "runs/#{token}/data", params).send
+      Parsehub::Request.new("runs/#{token}/data", params).get
     end
 
     def self.cancel(token)
-      Parsehub::Request.new(:post, "runs/#{token}/cancel").send
+      Parsehub::Request.new("runs/#{token}/cancel").post
     end
 
     def self.delete(token)
-      Parsehub::Request.new(:delete, "runs/#{token}").send
+      Parsehub::Request.new("runs/#{token}").delete
     end
   end
 end

@@ -24,6 +24,6 @@ module Parsehub
   end
 
   def self.logger
-    @logger ||= configuration.logger
+    @logger ||= Parsehub::Logger.new(STOUT)
   end
 end

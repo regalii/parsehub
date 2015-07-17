@@ -4,7 +4,6 @@ describe Parsehub::Run do
   before do
     Parsehub.configure do |config|
       config.api_key = 'test-api-key'
-      config.logger  = nil
     end
   end
 

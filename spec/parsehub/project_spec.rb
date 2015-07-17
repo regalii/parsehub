@@ -4,7 +4,6 @@ describe Parsehub::Project do
   before do
     Parsehub.configure do |config|
       config.api_key = 'test-api-key'
-      config.logger  = false
     end
   end
 
