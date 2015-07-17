@@ -11,7 +11,7 @@ module Parsehub
     end
 
     def logger?
-      logger.is_a?(Logger)
+      @logger.is_a?(Logger)
     end
   end
 end
