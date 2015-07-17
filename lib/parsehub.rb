@@ -24,6 +24,6 @@ module Parsehub
   end
 
   def self.logger
-    @logger ||= Parsehub::Logger.new(STOUT)
+    @logger ||= Parsehub::Logger.new(STDOUT)
   end
 end
