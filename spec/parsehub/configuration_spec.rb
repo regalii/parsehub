@@ -23,6 +23,6 @@ describe Parsehub::Configuration do
     end
 
     Parsehub.configuration.logger.must_be_kind_of(AwesomeLogger)
-    Parsehub.configuration.logger?.must_equal(true)
+    Parsehub.configuration.logged?.must_equal(true)
   end
 end

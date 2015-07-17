@@ -10,8 +10,8 @@ module Parsehub
       @logger  ||= Parsehub::Logger.new(STDOUT)
     end
 
-    def logger?
-      @logger.is_a?(Logger)
+    def logged?
+      !@logger.nil?
     end
   end
 end

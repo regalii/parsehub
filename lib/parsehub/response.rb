@@ -10,6 +10,8 @@ module Parsehub
               rescue
                 {message: 'Server returned a non-json error'}
               end if http_response
+              
+      @data.merge!(raw: http_response.body.inspect)
     end
 
     def success?
