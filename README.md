@@ -66,7 +66,7 @@ Parsehub::Run.delete('run-token')
 
 ## Versioning
 
-`x.y.z`
+Version # `x.y.z`
 
 * x = Parsehub's API major version
 * y = Parsehub's API minor version
