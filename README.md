@@ -64,6 +64,15 @@ Parsehub::Run.cancel('run-token')
 Parsehub::Run.delete('run-token')
 ```
 
+## Versioning
+
+`x.y.z`
+
+* x = Parsehub's API major version
+* y = Parsehub's API minor version
+* z = Gem's release release number
+
+For instance, `2.0.1` Gem version 1 that maps to Parsehub's API v2.0. 
 
 ## Contributing
 
