@@ -7,8 +7,8 @@ module Parsehub
       @success = http_response.kind_of?(Net::HTTPSuccess)
       @data = begin
                 JSON::parse(http_response.body)
-              rescue
-                {message: 'Server returned a non-json error'}
+              rescue JSON::JSONError
+                {message: 'Error parsing response to JSON'}
               end if http_response
 
       @data.merge!(raw: http_response.body.inspect) if Parsehub.configuration.debug?
